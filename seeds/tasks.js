@@ -1,10 +1,24 @@
 exports.seed = function(knex, Promise) {
+  // Deletes ALL existing entries
   return knex('tasks').del()
     .then(function () {
+      // Inserts seed entries
       return knex('tasks').insert([
-        {title: 'Bom dia', description: 'Você deu bom dia para alguém há 1 dia'},
-        {title: 'Ligação', description: 'Você ligou para seus amigos há 2 dias'},
-        {title: 'Zapzap', description: 'Envie um zapzapson aos seus amigos em 2 horas'},
+        {
+          title: 'Bom dia', 
+          description: 'Você deu bom dia para alguém há 44 dias', 
+          what: 2, who: 6
+        },
+        {
+          title: 'Ligação', 
+          description: 'Você ligou para seus amigos há 44 dias',
+          what: 3, who: 4
+        },
+        {
+          title: 'Zap', 
+          description: 'Envie um zap aos seus pais em 6 horas',
+          what: 1, who: 1
+        }
       ]);
     });
 };
