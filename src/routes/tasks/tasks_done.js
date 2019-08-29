@@ -6,14 +6,14 @@ const response_builder = data => {
     response = {
       status: "200",
       data: {
-        id: data[0].id ? data[0].id : 0,
+        oid: data[0].oid ? data[0].oid : 0,
         title: data[0].title ? data[0].title : "",
         description: data[0].description ? data[0].description : ""
       },
       links: [
         {
-          rel: `/linkrels/tasks/${data[0].id}/undone`,
-          uri: `/tasks/${data[0].id}/undone`
+          rel: `/linkrels/tasks/${data[0].oid}/undone`,
+          uri: `/tasks/${data[0].oid}/undone`
         }
       ]
     };
